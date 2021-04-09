@@ -32,8 +32,8 @@ class MacosTheme extends InheritedWidget {
 }
 
 extension themeContext on BuildContext {
-  Style get theme => MacosTheme.of(this);
-  Style? get maybeTheme => MacosTheme.maybeOf(this);
+  Style get style => MacosTheme.of(this);
+  Style? get maybeStyle => MacosTheme.maybeOf(this);
 }
 
 extension brightnessExtension on Brightness {
@@ -49,9 +49,14 @@ class Style with Diagnosticable {
     this.typography,
     this.brightness,
     this.accentColor,
+    this.resizerColor,
     this.animationCurve,
     this.mediumAnimationDuration,
   });
+
+  factory Style.fallback([Brightness? brightness]) {
+    return Style(brightness: brightness).build();
+  }
 
   final CupertinoDynamicColor? accentColor;
 
@@ -60,6 +65,8 @@ class Style with Diagnosticable {
   final Brightness? brightness;
 
   final Duration? mediumAnimationDuration;
+
+  final Color? resizerColor;
 
   final Typography? typography;
 
@@ -70,16 +77,13 @@ class Style with Diagnosticable {
       typography: Typography.defaultTypography(brightness: brightness)
           .copyWith(typography),
       accentColor: accentColor ?? CupertinoColors.systemBlue,
+      resizerColor: resizerColor ?? CupertinoColors.systemGrey,
       mediumAnimationDuration: Duration(milliseconds: 300),
       animationCurve: Curves.easeInOut,
     );
 
     //return defaultStyle.copyWith(Style());
     return defaultStyle;
-  }
-
-  static Style fallback([Brightness? brightness]) {
-    return Style(brightness: brightness).build();
   }
 
   Style copyWith(Style? other) {
@@ -90,6 +94,8 @@ class Style with Diagnosticable {
       animationCurve: other.animationCurve ?? animationCurve,
       mediumAnimationDuration:
           other.mediumAnimationDuration ?? mediumAnimationDuration,
+      accentColor: other.accentColor ?? accentColor,
+      resizerColor: other.resizerColor ?? resizerColor,
     );
   }
 

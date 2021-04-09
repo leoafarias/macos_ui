@@ -1,8 +1,7 @@
 library macos_ui;
 
-/// todo: package-level docs
-
-export 'package:flutter/widgets.dart' hide Icon, IconTheme, TextBox;
+export 'package:flutter/cupertino.dart'
+    show CupertinoColors, CupertinoDynamicColor;
 export 'package:flutter/material.dart'
     show
         Brightness,
@@ -11,12 +10,21 @@ export 'package:flutter/material.dart'
         DefaultMaterialLocalizations,
         PageTransitionsBuilder,
         FlutterLogo,
-        CircleAvatar;
-export 'package:flutter/cupertino.dart'
-    show CupertinoColors, CupertinoDynamicColor;
+        CircleAvatar,
+        Divider,
+        Scrollbar,
+        MouseRegion,
+        VerticalDivider;
 
-export 'src/macos_app.dart';
-export 'src/util.dart';
-export 'src/styles/theme.dart';
-export 'src/styles/typography.dart';
+/// todo: package-level docs
+export 'package:flutter/widgets.dart' hide Icon, IconTheme, TextBox;
+
+export 'src/layout/content_area.dart';
 export 'src/layout/scaffold.dart';
+export 'src/layout/resizable_pane.dart';
+export 'src/layout/sidebar.dart';
+export 'src/layout/title_bar.dart';
+export 'src/macos_app.dart';
+export 'src/styles/style.dart';
+export 'src/styles/typography.dart';
+export 'src/util.dart';
