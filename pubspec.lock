@@ -78,6 +78,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0"
+  code_checker:
+    dependency: transitive
+    description:
+      name: code_checker
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.6"
   collection:
     dependency: transitive
     description:
@@ -112,7 +119,7 @@ packages:
       name: dart_code_metrics
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "3.0.0-nullsafety.2"
+    version: "3.0.0"
   dart_style:
     dependency: transitive
     description:
@@ -158,6 +165,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.15.0"
+  intl:
+    dependency: transitive
+    description:
+      name: intl
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.17.0"
+  js:
+    dependency: transitive
+    description:
+      name: js
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.3"
   matcher:
     dependency: transitive
     description:
@@ -172,6 +193,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.3.0"
+  node_interop:
+    dependency: transitive
+    description:
+      name: node_interop
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.1"
+  node_io:
+    dependency: transitive
+    description:
+      name: node_io
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.0"
   package_config:
     dependency: transitive
     description:
@@ -219,6 +254,15 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0"
+  split_view:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: null_safety
+      resolved-ref: e9b5f42d8072e3a5f91d3abbd6df902560d79703
+      url: "https://github.com/GroovinChip/split_view.git"
+    source: git
+    version: "2.0.0+2"
   stack_trace:
     dependency: transitive
     description:
